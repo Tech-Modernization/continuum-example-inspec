@@ -14,10 +14,6 @@ describe sshd_config do
     its('SyslogFacility') { should eq('AUTHPRIV') }
 end
 
-describe user('root') do
-     it { should not exist }
-end
-
 describe os[:family] do
       it { should eq 'centos' }
 end
